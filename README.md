@@ -136,19 +136,6 @@ Metrics below treat **Risk as the positive class**.
 - Use precision–recall curves / PR-AUC and choose an operating threshold from business costs.
 - Engineer richer target/features from `credit_record` (delinquency count, months on book, worst status).
 - Add feature importance and SHAP explanations; run a fairness audit.
-- Package as a script/API (e.g. FastAPI or Streamlit) with the trained pipeline saved via `joblib`.
-
-## Installation & Usage
-```bash
-git clone <your-repo-url>
-cd <your-repo>
-python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
-pip install pandas numpy matplotlib scikit-learn kagglehub jupyter
-jupyter notebook dataset.ipynb
-```
-1. The notebook downloads the data via `kagglehub.dataset_download("rikdifos/credit-card-approval-prediction")` (a Kaggle account/API credentials may be required).
-2. Update the two `pd.read_csv(...)` paths to point at the folder printed by that cell (or use the `path` variable).
-3. Run all cells top to bottom.
 
 ## Repository Structure
 ```
